@@ -18,6 +18,23 @@
     <input [(ngModel)]="hero.name" placeholder="name"/>
 ```
 
+* service
+
+The @Injectable() decorator accepts a metadata object for the service, the same way the @Component() decorator did for your component classes.
+```ts
+    import { Injectable } from '@angular/core';
+    @Injectable({
+        providedIn: 'root'
+    })
+
+    import { Component} from '@angular/core';
+    @Component({
+        selector: 'app-heroes',
+        templateUrl: './heroes.component.html',
+        styleUrls: ['./heroes.component.less']
+    })
+```
+
 ## Component Communication 
 
 >1. @input
