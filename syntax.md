@@ -64,7 +64,32 @@ of(HEROES) returns an Observable<Hero[]> that emits a single value, the array of
 
 The subscribe() method passes the emitted array to the callback, which sets the component's heroes property when the response arrives,
 
+## Routing
+```ts
+    ng generate module app-routing --flat --module=app
+```
+--flat puts the file in src/app instead of its own folder.
 
+--module=app tells the CLI to register it in the imports array of the AppModule.
+
+```ts
+    const routes: Routes = [
+        { path: 'heroes', component: HeroesComponent }
+    ];
+
+    @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+    })
+    export class AppRoutingModule { }
+```
+A typical Angular Route has two properties:
+
+>**path:** a string that matches the URL in the browser address bar.
+
+>**component:** the component that the router should create when navigating to this route.
+
+>**@NgModule** metadata initializes the router and starts it listening for browser location changes.
 
 ## Component Communication 
 
