@@ -12,7 +12,10 @@
     <li [class.selected]="hero === selectedHero">
 
 ```
-
+## ng for
+```html
+<div *ngFor='let message of messageService.messages'> {{message}} </div>
+```
 ## ng model
 ```html
     <input [(ngModel)]="hero.name" placeholder="name"/>
@@ -58,6 +61,8 @@ When you provide the service at the *root* level, Angular creates a single, shar
         heroes => this.heroes = heroes);
 ```
 of(HEROES) returns an Observable<Hero[]> that emits a single value, the array of mock heroes.
+
+The subscribe() method passes the emitted array to the callback, which sets the component's heroes property when the response arrives,
 
 
 
