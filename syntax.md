@@ -36,17 +36,21 @@ Service must be available to the dependency injection system before Angular can 
 **Injector** is the object that is responsible for choosing and injecting the provider where the app requires it
 
 ```ts
+    //service
     import { Injectable } from '@angular/core';
     @Injectable({
         providedIn: 'root'
     })
+    export class HeroService {}
 
+    //component
     import { Component} from '@angular/core';
     @Component({
         selector: 'app-heroes',
         templateUrl: './heroes.component.html',
         styleUrls: ['./heroes.component.less']
     })
+    export class HeroesComponent implements OnInit {}
 ```
 When you provide the service at the *root* level, Angular creates a single, shared instance of HeroService and injects into any class that asks for it,
 
@@ -65,6 +69,9 @@ of(HEROES) returns an Observable<Hero[]> that emits a single value, the array of
 The subscribe() method passes the emitted array to the callback, which sets the component's heroes property when the response arrives,
 
 ## Routing
+
+best practice is to load and configure the router in a separate, top-level module that is dedicated to routing and imported by the root AppModule
+
 ```ts
     ng generate module app-routing --flat --module=app
 ```
@@ -74,22 +81,46 @@ The subscribe() method passes the emitted array to the callback, which sets the 
 
 ```ts
     const routes: Routes = [
-        { path: 'heroes', component: HeroesComponent }
+        { path: 'heroes', component: HeroesComponent },
+        //redirects a URL that fully matches the empty path 
+        //to the route whose path is '/dashboard'
+        { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
     ];
 
     @NgModule({
+        // RouterModule imports array and configures it with the
+        // routes by calling RouterModule.forRoot():
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
     })
     export class AppRoutingModule { }
 ```
+@NgModule metadata initializes the router and starts it listening for browser location changes.
+
+>**@NgModule** metadata initializes the router and starts it listening for browser location changes.
+
+The method is called forRoot() because you configure the router at the application's root level. The forRoot() method supplies the service providers and directives needed for routing, and performs the initial navigation based on the current browser URL
+
+AppRoutingModule exports RouterModule so it will be available throughout the app
+
 A typical Angular Route has two properties:
 
 >**path:** a string that matches the URL in the browser address bar.
 
 >**component:** the component that the router should create when navigating to this route.
 
->**@NgModule** metadata initializes the router and starts it listening for browser location changes.
+In AppComponent .htm
+
+```html
+<nav>
+    <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+```
+The *RouterOutlet* is one of the router directives that became available to the AppComponent because AppModule imports AppRoutingModule which exported **RouterModule**
+
+routerLink attribute is set to "/heroes", the string that the router matches to the route to HeroesComponent. The routerLink is the selector for the RouterLink directive that turns user clicks into router navigations. It's another of the public directives in the **RouterModule**
+
 
 ## Component Communication 
 
