@@ -1,3 +1,12 @@
+# Tricks
+>embedding veriable to a string -> backticks ( ` )
+```ts
+this.messageService.add(`HeroService: fetched hero id=${id}`);
+```
+>finding one object from array of obj
+```ts
+HEROES.find(hero => hero.id === id)
+```
 # Concepts
 ## ng class 
 ```html
@@ -82,6 +91,9 @@ best practice is to load and configure the router in a separate, top-level modul
 ```ts
     const routes: Routes = [
         { path: 'heroes', component: HeroesComponent },
+        //: in the path indicates that 
+        //:id is a placeholder for a specific param
+        { path: 'detail/:id', component: HeroDetailComponent },
         //redirects a URL that fully matches the empty path 
         //to the route whose path is '/dashboard'
         { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
@@ -105,9 +117,9 @@ AppRoutingModule exports RouterModule so it will be available throughout the app
 
 A typical Angular Route has two properties:
 
->**path:** a string that matches the URL in the browser address bar.
+- **path:** a string that matches the URL in the browser address bar.
 
->**component:** the component that the router should create when navigating to this route.
+- **component:** the component that the router should create when navigating to this route.
 
 In AppComponent .htm
 
@@ -121,6 +133,32 @@ The *RouterOutlet* is one of the router directives that became available to the 
 
 routerLink attribute is set to "/heroes", the string that the router matches to the route to HeroesComponent. The routerLink is the selector for the RouterLink directive that turns user clicks into router navigations. It's another of the public directives in the **RouterModule**
 
+onclick routing can be done as 
+```html
+routerLink="/detail/{{hero.id}}"
+```
+
+getting :id in the component 
+```ts
+//in hero-detail.component.ts
+constructor(
+  private route: ActivatedRoute,
+  private location: Location
+)
+```
+
+- **ActivatedRoute** holds information about the route to this instance of the HeroDetailComponent
+- The **location** is an Angular service for interacting with the browser.  used to navigate back to the view that navigated here
+```ts
+this.location.back();
+```
+
+- To fetch from component on Init
+```ts
+//+ for number casting
+//.get Return a single value for the given parameter name:
+    const id = +this.route.snapshot.paramMap.get('id');
+```
 
 ## Component Communication 
 
