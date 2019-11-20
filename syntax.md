@@ -7,6 +7,23 @@ this.messageService.add(`HeroService: fetched hero id=${id}`);
 ```ts
 HEROES.find(hero => hero.id === id)
 ```
+>finding max of something(id) in array of object 
+```ts
+Math.max(...heroes.map(hero => hero.id))
+```
+>map() method 
+
+creates a new array with the results of calling a function for every array element
+```ts
+var persons = [
+  {firstname : "Tanumon", lastname: "Bej"},
+  {firstname : "Suman", lastname: "Bhowmick"}
+]
+
+persons.map((item)=>
+{return [item.firstname,item.lastname].join(" ");});
+//out:Tanumon Bej,Suman Bhowmick
+```
 # Concepts
 ## ng class 
 ```html
