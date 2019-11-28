@@ -18,12 +18,36 @@ creates a new array with the results of calling a function for every array eleme
 var persons = [
   {firstname : "Tanumon", lastname: "Bej"},
   {firstname : "Suman", lastname: "Bhowmick"}
-]
+];
+var obj = { 'a': 2, 'b': 3, 'c': 5 };
 
-persons.map((item)=>
-{return [item.firstname,item.lastname].join(" ");});
-//out:Tanumon Bej,Suman Bhowmick
+persons.map(item=> 
+    [item.firstname,item.lastname].join(" ")
+    ).map(name=> '" '+ name +' "');    
+//out:" Tanumon Bej "," Suman Bhowmick "
+//on object
+Object.keys(obj).map(
+    (key, index)=> obj[key]= 
+    Math.pow(obj[key],2)+1
+    );
+//console.log(obj): {"a":5,"b":10,"c":26}
 ```
+>... Spread syntax
+
+allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+
+```ts
+var arr1 = [0, 1, 2];
+var arr2 = [3, 4, 5];
+function print(t, u, v, w, x, y, z) 
+{ return ">" + t + u + v + w + x + y + z}
+print(-1, ...arr1, 2, ...[arr2[1],arr2[2]]);
+//out: >-1012245 
+print(...arr1,...arr2)
+//out: >012345undefined 
+```
+
+>arr
 # Concepts
 ## ng class 
 ```html

@@ -1,0 +1,25 @@
+input.ng-invalid {
+  background-color: pink;
+}
+input.ng-valid {
+  background-color: palegreen;
+}
+h5 {
+  color: cornflowerblue;
+  margin-top: 1rem !important;
+}
+table{
+  margin-top: 1rem;
+  width: 80% !important;
+}
+.rounded-pill {
+  background-color: honeydew;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: large;
+  font-weight: bold;
+}
+.striped{
+  background-color: lightcyan;
+}

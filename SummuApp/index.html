@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app='app' ng-controller='dataCtrl'>
+<head>
+	<title>{{title}}</title>
+	<style type="text/css"> @import "styleHello.css";</style>
+	<!--script src="../lib/angular.js"></script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <script src="controller.js"></script>
+</head>
+<body>
+	<center>
+		<header>
+			<h2>{{title}}</h2>
+		</header>
+	</center>
+	<div class="container">
+		<div class="row">
+			<button type="button" ng-click="add()" class="btn btn-secondary float-right">ADD</button>
+		</div>
+		<div class="row">
+		  <div class="col-sm" ng-repeat="elem in ObjToStore">
+			<div class="row">
+				<h5>{{elem.title}}</h5>
+			</div>
+			<div class="row">
+				<span class="border border-info rounded-pill">{{elem.total}}</span>
+			</div>
+			<div class="row">
+				<input type="number" ng-model="elem.entry">
+			</div>
+			<table class="table">
+				<tr ng-repeat="item in elem.history" ng-class-even="'striped'">
+					<td>{{item.val}}</td>
+					<td>{{item.month}}</td>
+				</tr>
+			</table>
+		  </div>
+		</div>
+	</div>
+</body>
+</html>
