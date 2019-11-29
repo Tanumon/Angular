@@ -3,9 +3,17 @@
 ```ts
 this.messageService.add(`HeroService: fetched hero id=${id}`);
 ```
+
+>get current month as short string..Nov,Jan..etc
+```ts
+new Date().toLocaleDateString('default',{ month: 'short'})
+``` 
 >finding one object from array of obj
 ```ts
+//returns the object
 HEROES.find(hero => hero.id === id)
+//finding Index
+let id:number = HEROES.findIndex(element => element==hero)
 ```
 >finding max of something(id) in array of object 
 ```ts
