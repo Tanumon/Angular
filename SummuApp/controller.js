@@ -20,7 +20,6 @@ angular
     }];
     $scope.add = ()=>{
         angular.forEach($scope.ObjToStore,(value)=>{
-            console.log(value.entry);
             if(value.entry > 0){
                 value.total+=+value.entry;
                 let mon = new Date().toLocaleDateString('default',{ month: 'short'})
@@ -28,5 +27,12 @@ angular
                 value.entry = 0;
             }
         });
+    };
+    $scope.returnClass = (obj)=>{
+        let id = $scope.ObjToStore.findIndex(element=>element===obj); 
+        if((id === 0 && obj.total > 300000) || (id === 1 && obj.total > 200000)){
+            return "rchedLimit";
+        }
+        return "";
     };
 });

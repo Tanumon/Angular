@@ -6,7 +6,7 @@
 	<!--script src="../lib/angular.js"></script-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
-    <script src="controller.js"></script>
+	<script src="controller.js"></script>
 </head>
 <body>
 	<center>
@@ -24,14 +24,15 @@
 				<h5>{{elem.title}}</h5>
 			</div>
 			<div class="row">
-				<span class="border border-info rounded-pill">{{elem.total}}</span>
+				<span class="border border-info rounded-pill" ng-class="returnClass(elem)">{{elem.total | currency: "₹"}}</span>
+				<span class="glyphicon glyphicon-ok"></span>
 			</div>
 			<div class="row">
 				<input type="number" ng-model="elem.entry">
 			</div>
 			<table class="table">
 				<tr ng-repeat="item in elem.history" ng-class-even="'striped'">
-					<td>{{item.val}}</td>
+					<td>{{item.val | currency: "₹"}}</td>
 					<td>{{item.month}}</td>
 				</tr>
 			</table>
