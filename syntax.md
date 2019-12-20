@@ -1,3 +1,56 @@
+# JS Con
+```js
+var fullname = 'tom';  
+var obj = {
+	fullname: 'hary',
+    prop:{
+    	fullname:'jack',
+        getFullName: function(){
+        	return this.fullname;
+        }
+    }
+};
+console.log(obj.prop.getFullName()) //jack
+var test = obj.prop.getFullName
+console.log(test()); //tom
+```
+
+```js
+function test(){
+	console.log(a);
+    console.log(foo());
+    
+    var a=1;
+    function foo(){
+    	return 2;
+    }
+}
+test();
+//undefined
+//2
+```
+
+```js
+var Empl = {
+	company: 'xyz'
+}
+var emp1 = Object.create(Empl);
+delete emp1.company;
+console.log(emp1.company); //xyz
+var emp3 = Object.assign({}, Empl);
+delete emp3.company
+console.log(emp3.company);//undefined
+```
+
+```js
+var x= {foo: 1};
+var output = (function(){
+	delete x.foo;
+    return x.foo;
+})();
+
+console.log(output); //undefined
+```
 # Tricks
 >embedding veriable to a string -> backticks ( ` )
 ```ts
@@ -55,7 +108,7 @@ print(...arr1,...arr2)
 //out: >012345undefined 
 ```
 
->arr
+
 # Concepts
 ## ng class 
 ```html
