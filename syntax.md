@@ -1,4 +1,4 @@
-# JS Con
+# JS Concept
 ```js
 var fullname = 'tom';  
 var obj = {
