@@ -5,6 +5,8 @@
 	<style type="text/css"> @import "styleHello.css";</style>
 	<!--script src="../lib/angular.js"></script-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
 	<script src="controller.js"></script>
 </head>
@@ -22,6 +24,13 @@
 		  <div class="col-sm" ng-repeat="elem in ObjToStore">
 			<div class="row">
 				<h5>{{elem.title}}</h5>
+			</div>
+			<div class="row" ng-if="elem.count!==undefined">
+				<div class="access border border-info rounded-pill">
+					<i class="fas fa-plus" ng-click="incr(elem)"></i>
+					<span>{{elem.count}}</span>
+					<i class="fas fa-minus" ng-click="decr(elem)"></i>
+				</div>
 			</div>
 			<div class="row">
 				<span class="border border-info rounded-pill" ng-class="returnClass(elem)">{{elem.total | currency: "₹"}}</span>

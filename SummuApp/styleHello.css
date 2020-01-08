@@ -12,6 +12,9 @@ table{
   margin-top: 1rem;
   width: 80% !important;
 }
+div.access * {
+  padding: 0rem 0.5rem 0rem 0.5rem;
+}
 .rounded-pill {
   background-color: honeydew;
   padding-right: 1rem;
