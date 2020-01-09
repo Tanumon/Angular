@@ -16,9 +16,29 @@
 			<h2>{{title}}</h2>
 		</header>
 	</center>
+	<div class="container collapsable" ng-show="IsEdit">
+		<div class="row">
+			<input type="text" class="form-control" ng-model="userInput">
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="button" ng-click="save()" class="btn btn-primary">
+					<i class="fas fa-location-arrow"></i>
+				</button>
+			</div>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">
-			<button type="button" ng-click="add()" class="btn btn-secondary float-right">ADD</button>
+			<div class="col-sm-4">
+				<button type="button" ng-click="send()" class="btn btn-primary"><i class="fas fa-envelope"></i></button>
+			</div>
+			<div class="col-sm-4">
+				<button type="button" ng-click="load()" class="btn btn-primary float-right"><i class="fas fa-upload"></i></button>
+			</div>
+			<div class="col-sm-4">
+				<button type="button" ng-click="add()" class="btn btn-secondary float-right">ADD</button>
+			</div>
 		</div>
 		<div class="row">
 		  <div class="col-sm" ng-repeat="elem in ObjToStore">

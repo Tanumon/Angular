@@ -29,3 +29,8 @@ div.access * {
 .rchedLimit{
   background-color: indianred;
 }
+.collapsable{
+  background-color: gray;
+  padding: 1rem 0.3rem 1rem 0.3rem;
+  border: 1px darkolivegreen;
+}

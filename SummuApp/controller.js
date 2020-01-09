@@ -2,6 +2,8 @@ angular
 .module('app',[])
 .controller('dataCtrl',function($scope){
     $scope.title = "P O C";
+    $scope.IsEdit = false;
+    $scope.userInput= "";
     $scope.ObjToStore=[{
         title:"Hd-Reg",
         total:0,
@@ -25,9 +27,7 @@ angular
 	function onDeviceReady() {
 		var storage = window.localStorage;
 		if(storage.getItem('objToStore')) {
-			var jsonObj = JSON.parse(storage.getItem('objToStore'));
-            $scope.ObjToStore = jsonObj;
-            $scope.$apply();
+			updateData(storage.getItem('objToStore'),true);
 		}
     }
     
@@ -43,6 +43,24 @@ angular
         setData();
     };
 
+    $scope.send = ()=>{
+        let sender = "tbej@rocketmail.com";
+        let subject = "From Summu App on" + new Date().toLocaleDateString();
+        let body = JSON.stringify($scope.ObjToStore);
+        window.open('mailto:'+ sender+'?subject=' + subject + '&body='+ body);
+    };
+
+    $scope.load=()=>{
+        $scope.IsEdit = true;
+    };
+    $scope.save=()=>{
+        $scope.IsEdit = false;
+        if($scope.userInput!==""){
+            let temp = $scope.userInput;
+            $scope.userInput = "";
+            updateData(temp,false);
+        }
+    };
     $scope.incr = (val)=>{
         $scope.ObjToStore.find(element=> element==val).count++;
         setData();
@@ -60,12 +78,17 @@ angular
     };
     $scope.returnCountClass = (obj)=>{
         let id = $scope.ObjToStore.findIndex(element=>element===obj); 
-        console.log(obj);
         if((id === 0 && obj.count > 12) || (id === 1 && obj.count > 4)){
-            alert("rched");
             return "rchedLimit";
         }
         return "";
+    }
+    updateData=(data,isToDigest)=>{
+        var jsonObj = JSON.parse(data);
+        $scope.ObjToStore = jsonObj;
+        if(isToDigest){
+            $scope.$apply();
+        }
     }
     setData = ()=>{
         var jsonStr = JSON.stringify($scope.ObjToStore);
