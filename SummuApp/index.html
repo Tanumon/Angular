@@ -28,12 +28,12 @@
 			<div class="row" ng-if="elem.count!==undefined">
 				<div class="access border border-info rounded-pill">
 					<i class="fas fa-plus" ng-click="incr(elem)"></i>
-					<span>{{elem.count}}</span>
+					<span ng-class="returnCountClass(elem)">{{elem.count}}</span>
 					<i class="fas fa-minus" ng-click="decr(elem)"></i>
 				</div>
 			</div>
 			<div class="row">
-				<span class="border border-info rounded-pill" ng-class="returnClass(elem)">{{elem.total | currency: "₹"}}</span>
+				<span class="border border-info rounded-pill" ng-class="returnValueClass(elem)">{{elem.total | currency: "₹"}}</span>
 				<span class="glyphicon glyphicon-ok"></span>
 			</div>
 			<div class="row">

@@ -40,25 +40,36 @@ angular
                 value.entry = 0;
             }
         });
-        document.addEventListener("deviceready", onDeviceReady, false);
-        function onDeviceReady() {       
-            var jsonStr = JSON.stringify($scope.ObjToStore);
-            var storage = window.localStorage;
-            storage.setItem('objToStore', jsonStr);
-        }
+        setData();
     };
 
     $scope.incr = (val)=>{
-        val.count++;
+        $scope.ObjToStore.find(element=> element==val).count++;
+        setData();
     }
     $scope.decr = (val)=>{
-        val.count--;
+        $scope.ObjToStore.find(element=> element==val).count--;
+        setData();
     }
-    $scope.returnClass = (obj)=>{
+    $scope.returnValueClass = (obj)=>{
         let id = $scope.ObjToStore.findIndex(element=>element===obj); 
         if((id === 0 && obj.total > 300000) || (id === 1 && obj.total > 200000)){
             return "rchedLimit";
         }
         return "";
     };
+    $scope.returnCountClass = (obj)=>{
+        let id = $scope.ObjToStore.findIndex(element=>element===obj); 
+        console.log(obj);
+        if((id === 0 && obj.count > 12) || (id === 1 && obj.count > 4)){
+            alert("rched");
+            return "rchedLimit";
+        }
+        return "";
+    }
+    setData = ()=>{
+        var jsonStr = JSON.stringify($scope.ObjToStore);
+        var storage = window.localStorage;
+        storage.setItem('objToStore', jsonStr);
+    }
 });
