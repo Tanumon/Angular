@@ -1,14 +1,14 @@
 ### Table of Contents
-|  | |
+|  | [Links](https://github.com/sudheerj/angular-interview-questions#what-is-angular-framework)|
 |---- | ---------
 |1 | [JS Concept](#JS-Concept)|
 |2 | [JS Tricks](#Tricks)|
-|3 | [Questions](https://github.com/sudheerj/angular-interview-questions#what-is-angular-framework)|
-|4 | [Ng Concepts](#Concepts)|
+|3 | [Ng Concepts](#Concepts)|
 | |  [ng class  :: ](#ng-class ) [ng for  ::](#ng-for ) [ng model ](#ng-model )  |
 | |  [Service](#Service) |
 | |  [Observable](#Observable)|
 | |  [Routing ](#Routing ) |
+| |  [HttpClient ](#HttpClient ) |
 | |  [Component Communication  ](#Component-Communication ) |
 
 
@@ -283,8 +283,17 @@ this.location.back();
     const id = +this.route.snapshot.paramMap.get('id');
 ```
 **[⬆ Back to Top](#table-of-contents)**
-## Component Communication 
+## HttpClient
+ for communicating with a remote server over HTTP
 
+ - http.get<T> returns Observable of type T
+ - all HttpClient returns RxJS Observable of something.
+ - HTTP is a request/response protocol. You make a request, it returns a single response.
+ - HttpClient.get() returns the body of the response as an untyped JSON object by default
+
+
+**[⬆ Back to Top](#table-of-contents)**
+## Component Communication 
 >1. @input
 
 In child component .ts
