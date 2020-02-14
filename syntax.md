@@ -3,7 +3,7 @@
 |---- | ---------
 |1 | [JS Concept](#JS-Concept)|
 |2 | [JS Tricks](#Tricks)|
-|3 | [Questions](#https://github.com/sudheerj/angular-interview-questions#what-is-angular-framework)|
+|3 | [Questions](https://github.com/sudheerj/angular-interview-questions#what-is-angular-framework)|
 |4 | [Ng Concepts](#Concepts)|
 | |  [ng class  :: ](#ng-class ) [ng for  ::](#ng-for ) [ng model ](#ng-model )  |
 | |  [Service](#Service) |
