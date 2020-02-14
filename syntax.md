@@ -1,4 +1,20 @@
+### Table of Contents
+|  | |
+|---- | ---------
+|1 | [JS Concept](#JS-Concept)|
+|2 | [JS Tricks](#Tricks)|
+|3 | [Questions](#https://github.com/sudheerj/angular-interview-questions#what-is-angular-framework)|
+|4 | [Ng Concepts](#Concepts)|
+| |  [ng class  :: ](#ng-class ) [ng for  ::](#ng-for ) [ng model ](#ng-model )  |
+| |  [Service](#Service) |
+| |  [Observable](#Observable)|
+| |  [Routing ](#Routing ) |
+| |  [Component Communication  ](#Component-Communication ) |
+
+
+
 # JS Concept
+
 ```js
 var fullname = 'tom';  
 var obj = {
@@ -51,6 +67,8 @@ var output = (function(){
 
 console.log(output); //undefined
 ```
+**[⬆ Back to Top](#table-of-contents)**
+
 # Tricks
 >embedding veriable to a string -> backticks ( ` )
 ```ts
@@ -107,7 +125,7 @@ print(-1, ...arr1, 2, ...[arr2[1],arr2[2]]);
 print(...arr1,...arr2)
 //out: >012345undefined 
 ```
-
+**[⬆ Back to Top](#table-of-contents)**
 
 # Concepts
 ## ng class 
@@ -133,7 +151,8 @@ print(...arr1,...arr2)
 ```
 need to import **Input** from '@angular/core';
 
-## service
+**[⬆ Back to Top](#table-of-contents)**
+## Service
 
 The **@Injectable()** decorator accepts a metadata object for the service,
 the same way the **@Component()** decorator did for your component classes.
@@ -165,6 +184,7 @@ Service must be available to the dependency injection system before Angular can 
 ```
 When you provide the service at the *root* level, Angular creates a single, shared instance of HeroService and injects into any class that asks for it,
 
+**[⬆ Back to Top](#table-of-contents)**
 ## Observable
 ```ts
     getHeroes(): Observable<Hero[]> {
@@ -179,6 +199,7 @@ of(HEROES) returns an Observable<Hero[]> that emits a single value, the array of
 
 The subscribe() method passes the emitted array to the callback, which sets the component's heroes property when the response arrives,
 
+**[⬆ Back to Top](#table-of-contents)**
 ## Routing
 
 best practice is to load and configure the router in a separate, top-level module that is dedicated to routing and imported by the root AppModule
@@ -261,7 +282,7 @@ this.location.back();
 //.get Return a single value for the given parameter name:
     const id = +this.route.snapshot.paramMap.get('id');
 ```
-
+**[⬆ Back to Top](#table-of-contents)**
 ## Component Communication 
 
 >1. @input
