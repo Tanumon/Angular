@@ -11,7 +11,7 @@
 | |  [HttpClient ](#HttpClient ) |
 | |  [Component Communication  ](#Component-Communication ) |
 
-
+---
 
 # JS Concept
 
@@ -69,6 +69,7 @@ console.log(output); //undefined
 ```
 **[⬆ Back to Top](#table-of-contents)**
 
+----
 # Tricks
 >embedding veriable to a string -> backticks ( ` )
 ```ts
@@ -127,6 +128,7 @@ print(...arr1,...arr2)
 ```
 **[⬆ Back to Top](#table-of-contents)**
 
+-----
 # Concepts
 ## ng class 
 ```html
@@ -290,7 +292,46 @@ this.location.back();
  - all HttpClient returns RxJS Observable of something.
  - HTTP is a request/response protocol. You make a request, it returns a single response.
  - HttpClient.get() returns the body of the response as an untyped JSON object by default
+ - catchError() operator intercepts an Observable that failed. It passes the error to an error handler
+ - RxJS tap() operator, which looks at the observable values, does something with those values, and passes them along. The tap() call back doesn't touch the values themselves
+ ```ts
+  return this.http.get<Hero[]>(this.heroesUrl)
+    .pipe(
+      tap(_ => this.log('fetched heroes')),
+      catchError(this.handleError<Hero[]>('getHeroes',[]))
+    )
+/**
+ * @param operation - name of the operation that failed
+ * @param result - optional value to return as the observable result
+*/
+private handleError<T> (operation = 'operation', result?: T) {
+  return (error: any): Observable<T> => {
+    console.error(error);
+    this.log(`${operation} failed: ${error.message}`);
+    return of(result as T);
+  };
+}
+ ```
+-  HttpClient.put() method takes three parameters:
+    * the URL
+    * the data to update (the modified hero in this case)
+    * options
+- .put()  expects a special header in HTTP save requests. That header is in the httpOptions constant
 
+```ts
+
+httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
+updateHero (hero: Hero): Observable<any> {
+    return this.http.put(this.heroesUrl, hero, this.httpOptions)
+    .pipe(
+      tap(_ => this.log(`updated hero id=${hero.id}`)),
+      catchError(this.handleError<any>('updateHero'))
+    );
+}
+```
 
 **[⬆ Back to Top](#table-of-contents)**
 ## Component Communication 
