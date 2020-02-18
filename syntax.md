@@ -153,6 +153,12 @@ print(...arr1,...arr2)
 ```
 need to import **Input** from '@angular/core';
 
+> one way binding 
+```html
+<input #heroName />
+<button (click)="add(heroName.value); heroName.value=''">
+```
+
 **[⬆ Back to Top](#table-of-contents)**
 ## Service
 
@@ -331,6 +337,10 @@ updateHero (hero: Hero): Observable<any> {
       catchError(this.handleError<any>('updateHero'))
     );
 }
+
+this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
+
+this.http.delete<Hero>(url, this.httpOptions).pipe(
 ```
 
 **[⬆ Back to Top](#table-of-contents)**
