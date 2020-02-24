@@ -87,6 +87,11 @@ HEROES.find(hero => hero.id === id)
 //finding Index
 let id:number = HEROES.findIndex(element => element==hero)
 ```
+
+>removing one object from array of obj
+```ts
+this.HEROES = this.HEROES.filter(h => h !== hero);
+```
 >finding max of something(id) in array of object 
 ```ts
 Math.max(...heroes.map(hero => hero.id))
