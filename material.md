@@ -122,31 +122,46 @@ It helps to provide custom iteration without creating temp collections.
 It helps to do stateful iteration.
 
 
-## Thread
+## Thread1
 ```c#
 static void Main()
-
 {
-
     Thread t = new Thread (Print);
-
     t.Start();
-
     t.Join();
-
     Console.WriteLine ("Thread ended!");
-
 }
 
 static void Print()
-
 {
-
     for (int i = 0; i < 1000; i++) Console.Write ("X");
-
 }
 ```
 
 1000 times X
+
 Thread ended!
+
+## Thread2
+
+```C#
+object locker1 = new object();
+object locker2 = new object();
+
+new Thread (() => {
+    lock (locker1)
+    {
+        Thread.Sleep (1000);
+        lock (locker2); 
+    }
+}).Start();
+
+lock (locker2)
+{
+    Thread.Sleep (1000);
+    lock (locker1);
+}
+
+//Dead lock 
+```
 ---
