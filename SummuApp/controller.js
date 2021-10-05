@@ -6,12 +6,16 @@ angular
     $scope.userInput= "";
     $scope.ObjToStore=[{
         title:"Hd-Reg",
+        ExCap:100000,
+        allowedAccess:8,
         total:0,
         entry:0,
         count:0,
         history:[]
     },{
         title:"Ax-Flip",
+        ExCap:200000,
+        allowedAccess:4,
         total:0,
         entry:0,
         count:0,
@@ -71,14 +75,14 @@ angular
     }
     $scope.returnValueClass = (obj)=>{
         let id = $scope.ObjToStore.findIndex(element=>element===obj); 
-        if((id === 0 && obj.total > 300000) || (id === 1 && obj.total > 200000)){
+        if((id === 0 && obj.total > obj.ExCap) || (id === 1 && obj.total > obj.ExCap)){
             return "rchedLimit";
         }
         return "";
     };
     $scope.returnCountClass = (obj)=>{
         let id = $scope.ObjToStore.findIndex(element=>element===obj); 
-        if((id === 0 && obj.count > 12) || (id === 1 && obj.count > 4)){
+        if((id === 0 && obj.count > obj.allowedAccess) || (id === 1 && obj.count > obj.allowedAccess)){
             return "rchedLimit";
         }
         return "";

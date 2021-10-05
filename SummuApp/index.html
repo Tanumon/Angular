@@ -51,10 +51,12 @@
 					<span ng-class="returnCountClass(elem)">{{elem.count}}</span>
 					<i class="fas fa-minus" ng-click="decr(elem)"></i>
 				</div>
+				<span ng-if="elem.count" class="badge bg-warning text-dark">{{elem.allowedAccess - elem.count}} Left</span>
 			</div>
 			<div class="row">
 				<span class="border border-info rounded-pill" ng-class="returnValueClass(elem)">{{elem.total | currency: "₹"}}</span>
 				<span class="glyphicon glyphicon-ok"></span>
+				<span ng-if="elem.total" class="badge bg-success text-dark">{{elem.ExCap - elem.total}} Left</span>
 			</div>
 			<div class="row">
 				<input type="number" ng-model="elem.entry">
