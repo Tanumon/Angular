@@ -1,7 +1,7 @@
 angular
 .module('app',[])
 .controller('dataCtrl',function($scope){
-    $scope.title = "P O C";
+    $scope.title ="Tracker";
     $scope.IsEdit = false;
     $scope.userInput= "";
     $scope.ObjToStore=[{
@@ -25,7 +25,16 @@ angular
         total:0,
         entry:0,
         history:[]
-    }];
+    },{
+        title:"Ax-ACE",
+        ExCap:200000,
+        allowedAccess:4,
+        total:0,
+        entry:0,
+        count:0,
+        history:[]
+    }
+];
 
     document.addEventListener("deviceready", onDeviceReady, false);
 	function onDeviceReady() {
