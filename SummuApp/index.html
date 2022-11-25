@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='app' ng-controller='dataCtrl'>
+<html ng-app='app' ng-controller='dataCtrl' data-ng-init='init()'>
 <head>
 	<title>{{title}}</title>
 	<style type="text/css"> @import "styleHello.css";</style>
@@ -7,6 +7,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script type="text/javascript" src="cordova.js"></script>
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<script src='https://smtpjs.com/v3/smtp.js'>
+  </script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
 	<script src="controller.js"></script>
 </head>
@@ -44,6 +46,7 @@
 		  <div class="col-sm" ng-repeat="elem in ObjToStore">
 			<div class="row">
 				<h5>{{elem.title}}</h5>
+				<h6>{{elem.anualYear}}</h6>
 			</div>
 			<div class="row" ng-if="elem.count!==undefined">
 				<div class="access border border-info rounded-pill">
@@ -56,7 +59,7 @@
 			<div class="row">
 				<span class="border border-info rounded-pill" ng-class="returnValueClass(elem)">{{elem.total | currency: "₹"}}</span>
 				<span class="glyphicon glyphicon-ok"></span>
-				<span ng-if="elem.total" class="badge bg-success text-dark">{{elem.ExCap - elem.total}} Left</span>
+				<span ng-if="elem.total && (elem.ExCap - elem.total)>0" class="badge bg-success text-dark">{{elem.ExCap - elem.total}} Left</span>
 			</div>
 			<div class="row">
 				<input type="number" ng-model="elem.entry">

@@ -6,6 +6,7 @@ angular
     $scope.userInput= "";
     $scope.ObjToStore=[{
         title:"Hd-Reg",
+        anualYear:"12th Nov",
         ExCap:100000,
         allowedAccess:8,
         total:0,
@@ -14,6 +15,7 @@ angular
         history:[]
     },{
         title:"Ax-Flip",
+        anualYear:"15th Nov",
         ExCap:200000,
         allowedAccess:4,
         total:0,
@@ -27,6 +29,7 @@ angular
         history:[]
     },{
         title:"Ax-ACE",
+        anualYear:"15th Apr",
         ExCap:200000,
         allowedAccess:4,
         total:0,
@@ -43,7 +46,12 @@ angular
 			updateData(storage.getItem('objToStore'),true);
 		}
     }
-    
+    $scope.init = function () {
+        var storage = window.localStorage;
+		if(storage.getItem('objToStore')) {
+			updateData(storage.getItem('objToStore'),false);
+		}
+    }
     $scope.add = ()=>{
         angular.forEach($scope.ObjToStore,(value)=>{
             if(value.entry > 0){
@@ -54,13 +62,19 @@ angular
             }
         });
         setData();
+        //updateData(storage.getItem('objToStore'),false);
     };
 
     $scope.send = ()=>{
+        setData();
         let sender = "tbej@rocketmail.com";
+        let reciver = "tbej@rocketmail.com"
         let subject = "From Summu App on" + new Date().toLocaleDateString();
-        let body = JSON.stringify($scope.ObjToStore);
-        window.open('mailto:'+ sender+'?subject=' + subject + '&body='+ body);
+        let email = 'mailto:'+ sender+'?subject=' + subject + '&body='+ ''+JSON.stringify({});
+        //$scope.ObjToStore
+        console.log(JSON.stringify($scope.ObjToStore));
+        console.log(email);
+        window.open(email);
     };
 
     $scope.load=()=>{
@@ -84,7 +98,7 @@ angular
     }
     $scope.returnValueClass = (obj)=>{
         let id = $scope.ObjToStore.findIndex(element=>element===obj); 
-        if((id === 0 && obj.total > obj.ExCap) || (id === 1 && obj.total > obj.ExCap)){
+        if((id !== 2 && obj.total > obj.ExCap)){
             return "rchedLimit";
         }
         return "";
@@ -98,6 +112,8 @@ angular
     }
     updateData=(data,isToDigest)=>{
         var jsonObj = JSON.parse(data);
+        console.log("from update");
+        console.log(jsonObj);
         $scope.ObjToStore = jsonObj;
         if(isToDigest){
             $scope.$apply();

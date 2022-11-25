@@ -8,6 +8,11 @@ h5 {
   color: cornflowerblue;
   margin-top: 1rem !important;
 }
+h6 {
+  margin-top: 1.5rem !important;;
+  margin-left: 2rem !important;;
+  color:cornflowerblue;
+}
 table{
   margin-top: 1rem;
   width: 80% !important;
