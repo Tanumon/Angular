@@ -36,6 +36,11 @@ angular
         entry:0,
         count:0,
         history:[]
+    },{
+        title:"KT-LG",
+        total:0,
+        entry:0,
+        history:[]
     }
 ];
 

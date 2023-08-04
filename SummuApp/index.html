@@ -6,7 +6,8 @@
 	<!--script src="../lib/angular.js"></script-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script type="text/javascript" src="cordova.js"></script>
-	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src='https://smtpjs.com/v3/smtp.js'>
   </script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
@@ -33,13 +34,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4">
-				<button type="button" ng-click="send()" class="btn btn-primary"><i class="fas fa-envelope"></i></button>
+				<button type="button" ng-click="send()" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="send"><i class="fas fa-envelope-open-text">send</i></button>
 			</div>
 			<div class="col-sm-4">
-				<button type="button" ng-click="add()" class="btn btn-secondary float-right"><i class="fas fa-chart-line"></i></button>
+				<button type="button" ng-click="add()" class="btn btn-secondary float-right" data-toggle="tooltip" data-placement="top" title="add"><i class="fas fa-chart-line">add</i></button>
 			</div>
 			<div class="col-sm-4">
-				<button type="button" ng-click="load()" class="btn btn-primary"><i class="fas fa-upload"></i></button>
+				<button type="button" ng-click="load()" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="load"><i class="fas fa-upload">load</i></button>
 			</div>
 		</div>
 		<div class="row">
