@@ -5,18 +5,9 @@ angular
     $scope.IsEdit = false;
     $scope.userInput= "";
     $scope.ObjToStore=[{
-        title:"Hd-Reg",
-        anualYear:"12th Nov",
-        ExCap:100000,
-        allowedAccess:8,
-        total:0,
-        entry:0,
-        count:0,
-        history:[]
-    },{
         title:"Ax-Flip",
         anualYear:"15th Nov",
-        ExCap:200000,
+        ExCap:350000,
         allowedAccess:4,
         total:0,
         entry:0,
@@ -40,6 +31,24 @@ angular
         title:"KT-LG",
         total:0,
         entry:0,
+        history:[]
+    },
+    {
+        title:"IDFC-Wlth",
+        allowedAccess:8,
+        total:0,
+        entry:0,
+        count:0,
+        history:[]
+    },
+    {
+        title:"DBS-5x",
+        anualYear:"17th Mar",
+        allowedAccess:4,
+        ExCap:75000,
+        total:0,
+        entry:0,
+        count:0,
         history:[]
     }
 ];
@@ -77,7 +86,13 @@ angular
         let subject = "From Summu App on" + new Date().toLocaleDateString();
         let email = 'mailto:'+ sender+'?subject=' + subject + '&body='+ ''+JSON.stringify({});
         //$scope.ObjToStore
-        console.log(JSON.stringify($scope.ObjToStore));
+        let content = JSON.stringify( $scope.ObjToStore, function( key, value ) {
+            if( key === "$$hashKey" ) {
+                return undefined;
+            }
+            return value;
+        });
+        console.log(content);//angular.toJson($scope.ObjToStore));
         console.log(email);
         window.open(email);
     };
@@ -101,9 +116,10 @@ angular
         $scope.ObjToStore.find(element=> element==val).count--;
         setData();
     }
+    
     $scope.returnValueClass = (obj)=>{
         let id = $scope.ObjToStore.findIndex(element=>element===obj); 
-        if((id !== 2 && obj.total > obj.ExCap)){
+        if(( obj.total > obj.ExCap)){
             return "rchedLimit";
         }
         return "";
