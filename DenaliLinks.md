@@ -13,7 +13,11 @@
 | 10| Regulatory Affairs Management Plan (VA30)| 11218601 EQP 301 01 | [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/Ea6l1iDQN8VHlcLukno48nkBw_h9UBhQUdYCn38mHDH-fA?email=tanumon.bej%40siemens-healthineers.com&e=IoxiCh)|
 | | Defect Management|PLM0013-M   | [link]()|
 | | Product Change Control Process| PLM0013-M  | [link]()|
-
+| | Software Design and Implementation |  PLM102-G| [link]()|
+| | Product Development Process |PLM0101-P | [link]()|
+| | Requirements Management|PLM0177-M  | [link]()|
+| | |  | [link]()|
+| | |  | [link]()|
 | | |  | [link]()|
 | | |  | [link]()|
 ---
@@ -21,6 +25,10 @@
 # abriviation 
 - AOP - Aspect-Oriented Programming
 - WBS - Work Breakdown Structure - for estimation 
+- PMI - Plus/Minus Implications - DAR Approach
+- Paired comparison analysis - method of comparing two options at a time to determine which is better
+- Person Days estimation techniques 
+
 
 ---
 
