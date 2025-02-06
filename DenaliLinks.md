@@ -27,8 +27,9 @@
 |24| Statement of Work for Scanner and Clinical Applications| 812901 QMS BPA 10| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EZTtxIk2dlNIt2viDsKKkNIB9i32BFDHML_4bA5Yj6IyXw?email=tanumon.bej%40siemens-healthineers.com&e=3S6NQk)|
 | 25| **Quality Management Plan** | 11218601 EQP 300 01| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EeSEo8OHZ9hHu9G0dGJpZKsBFlsKV19cpDyAwnjjzJyzUw?email=tanumon.bej%40siemens-healthineers.com&e=2dYZhn)|
 | 26| Regulatory Affairs Management Plan (VA30)| 11218601 EQP 301 01 | [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/Ea6l1iDQN8VHlcLukno48nkBw_h9UBhQUdYCn38mHDH-fA?email=tanumon.bej%40siemens-healthineers.com&e=IoxiCh)|
-| 27| | 11218601 EPM 205| [Link]()|
-| 28| |  | [link]()|
+| 27| Denali VA30A Risk Register| 11218601 EPM 305| [Link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EWH4_OGe_FdPloOYAvSGKbwBlpGAR7UPK1r1KVbkIa_2hA?email=tanumon.bej%40siemens-healthineers.com&e=5wpgdG)|
+| 28| SIT/ST Plan | 11218601 EPM 302 03 | [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/Ea7GzQHX0o9PjbSqkqXIQAsBbphPeLvEJu_I6FmRyd5KTQ?email=tanumon.bej%40siemens-healthineers.com&e=lhy9ym)|
+| 29| |  | [link]()|
 | 30| Product Change Control Process| PLM0013-M  | [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/Eb8syzclziBJn4sg7okZ4ZgBZGfWQk_MZizxxBcZk_bzLg?email=tanumon.bej%40siemens-healthineers.com&e=0SEEiv)|
 | 31| Software Design and Implementation | PLM0102-M| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EaC4GPAVyndJuMPgsrir_d4ByDPAaBHhlZZwILcuH0u4sw?email=tanumon.bej%40siemens-healthineers.com&e=5cRKzj)|
 | 32| Requirements Management| PLM0177-M  | [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EV6s7e5eHF9IkOiTkRlw618Bowq8xth0lrmhJUbLeDjncQ?email=tanumon.bej%40siemens-healthineers.com&e=UIDxSW)|
