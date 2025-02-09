@@ -1,7 +1,7 @@
 ### Table of Docs
-|  | Document | Number | link |
-|--| ---------|--------|------|
-|1 | Software Architecture Document | 11218622  EPH 104 03 |  [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/ER7T3E4dh5pCmwpBNylk7VoB-_ifWNk4Wb3uNCt6-DW-wA?email=tanumon.bej%40siemens-healthineers.com&e=Q275j8)|
+|  | Document | Number | link | local |
+|--| ---------|--------|------|-------|
+|1 | Software Architecture Document | 11218622  EPH 104 03 |  [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/ER7T3E4dh5pCmwpBNylk7VoB-_ifWNk4Wb3uNCt6-DW-wA?email=tanumon.bej%40siemens-healthineers.com&e=Q275j8)| [local](C:\Users\z003vh8v\OneDrive - Siemens Healthineers\Doc\Software Architecture Document.pdf) |
 |2 | SPECTSyngo Software Architecture Document| 11218622 EPH 105 01 | [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EcMZMuWYHkZBudSC_nQIbGEB0QWzNxmwK_Z1jUsEuXzqgA?email=tanumon.bej%40siemens-healthineers.com&e=DsrlXr)|
 |3 | ICS Pre-Scan SFS (VA30) | 11218622  EPH 300 09  | [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EZTT5z8UIj9EjpYYTRIzAY0BHet4ha4414_iwY7Wg40V5w?email=tanumon.bej%40siemens-healthineers.com&e=umPm6L)|
 |4 | ICS Scan SFS (VA30)|  11218622  EPH 301 02  | [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/Ede1qEGRyYJHgO1K6sUygUwBXUH1I-_HrB9nxPOgO8aueg?email=tanumon.bej%40siemens-healthineers.com&e=qQusnZ)|
@@ -16,8 +16,8 @@
 |13 | SSIT-Risk-Mitigation-Automated |  11218622 EIT 309 03| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/Ecj3dPxzB8pGuCCvGpN5TysBDEvmDiudF7PVuRwr46loRQ?email=tanumon.bej%40siemens-healthineers.com&e=lU3S2b)|
 |14 | SSIT-ICS Pre-Scan Manual SSIT Formal Test Report|11218622 EPI 303 03 | [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/ETdIg2XFUvdAri-ovlsvfc8B7OYpe5MYHKkyeqMicJjUGA?email=tanumon.bej%40siemens-healthineers.com&e=xNInTh)|
 |15 | SSIT-ICS-Pre-Scan Test Automation Report|11218622 EPI 300 03| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EZSTgpoUm8ZLiuMf_MeJ3PEBwSN7P66YgxoVeemAjt0IQQ?email=tanumon.bej%40siemens-healthineers.com&e=a26EJj)|
-|16 | SSIT-ICS Scan Manual SSIT Formal Test Report|11218622 EPI 304 02| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EZeMFC2OCRRLhvg8klAN0PoBXJCP0GHg86HA5PJMQOyfXg?email=tanumon.bej%40siemens-healthineers.com&e=kOusVW)|
-|17 | SSIT-ICS-Scan Test Automation Report | 11218622 EPI 301 02| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/ESe6G9yOHlZOlA4FIpOGzoYBZvJOPrfuxu5c3LbXHi9IEw?email=tanumon.bej%40siemens-healthineers.com&e=ko870f)|
+|16 | SSIT-ICS Scan Manual SSIT Formal Test Report|11218622 EPI 301 02| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/ESe6G9yOHlZOlA4FIpOGzoYBZvJOPrfuxu5c3LbXHi9IEw?email=tanumon.bej%40siemens-healthineers.com&e=ko870f)|
+|17 | SSIT-ICS-Scan Test Automation Report | 11218622 EPI 304 02| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EZeMFC2OCRRLhvg8klAN0PoBXJCP0GHg86HA5PJMQOyfXg?email=tanumon.bej%40siemens-healthineers.com&e=kOusVW)|
 |18 | SSIT-ICS-Post-Scan Test Manual Report| 11218622 EPI 305 02| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/ERAuSyjDXI5Koar2v0b_2LEBcUIpwM8KhWl8EDImyy8rQg?email=tanumon.bej%40siemens-healthineers.com&e=NztLwX)|
 |19 | SSIT-ICS-Post-Scan Test Automation Report | 11218622 EPI 302 02| [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EY95sCjRoLdEnWJHODgWfewBbVYi3Tm2ZeCqU5-TOoreug?email=tanumon.bej%40siemens-healthineers.com&e=Jhvp6R)|
 |20 | SSIT-Risk Mitigation Manual SSIT Formal| 11218622 EPI 310 03 | [link](https://healthineersapc-my.sharepoint.com/:b:/g/personal/tanumon_bej_siemens-healthineers_com/EbZjA-hcuhhFrtJ7iiqV104BSZPFtZgkiB7efOzCeEmOiA?email=tanumon.bej%40siemens-healthineers.com&e=Gipjte)|
