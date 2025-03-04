@@ -8,7 +8,7 @@ Following class diagram shows various components which are part of gantry displa
 
 Following class diagram shows various components linkages for toggling pscope header. This class diagram also shows various classes and their associations and compositions to achieve the same.
 
-![ShowHidePscopeHeader](../Media/image4.emf){#fig:}
+![ShowHidePscopeHeader](../Media/ShowHidePscopeHeader.png){#fig:}
 
 This class diagram describes the whole gantry display application, which includes both front end and back end. This diagram shows various components and communication between them. This includes SignalR communication between angular clients and back end hubs, H communication between gantry display back end and Exam/Calibration/System layer.
 
