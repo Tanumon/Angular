@@ -4,7 +4,7 @@
 
 Following class diagram shows various components which are part of gantry display WPF application.
 
-![Gantry Display FE](../media/Gantry_Display_FE.jpg){#fig:}
+![Gantry Display FE](../media/Gantry_Display_FE.png){#fig:}
 
 Following class diagram shows various components linkages for toggling pscope header. This class diagram also shows various classes and their associations and compositions to achieve the same.
 
