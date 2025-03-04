@@ -4,7 +4,7 @@
 
 Following class diagram shows various components which are part of gantry display WPF application.
 
-![Gantry Display FE](../media/Gantry_Display_FE.png){#fig:}
+![Gantry Display FE](../Media/Gantry_Display_FE.png){#fig:}
 
 Following class diagram shows various components linkages for toggling pscope header. This class diagram also shows various classes and their associations and compositions to achieve the same.
 
@@ -14,63 +14,63 @@ This class diagram describes the whole gantry display application, which include
 
 Following class diagram also shows, how gantry display angular application is hosted in IIS and how gantry display FE(WPF application) is browsing to the IIS hosted angular app.
 
-![MI.GantryDisplay](../Media/image5.emf){#fig:}
+![MI.GantryDisplay](../Media/MIGantryDisplay.png){#fig:}
 
 ### Calibration
 
 Following class diagram shows the GantryDisplay class structure for Calibration Mode. This Diagram basically shows ExecutionControl related operation but same can be extended to ProtocolParameter, ScanProgress and any other operation between GPT and Calibration App.
 
-![CalibrationExecutionControlOperation](../Media/image6.emf){#fig:}
+![CalibrationExecutionControlOperation](../Media/CalibrationExecutionControlOperation.png){#fig:}
 
 Following class diagram shows the GantryDisplay class structure for Calibration Motion Info Provider. This Diagram basically shows Opening or closing automatic motion in progress and enable/Disable navigator buttons in gantry display from calibration
 
-![MotionInfoProvider](../Media/image7.emf){#fig:}
+![MotionInfoProvider](../Media/MotionInfoProvider.png){#fig:}
 
 ### GantryDisplayDiagnostics
 
 The class diagram to show the relationship between classes and interfaces involved in GPT Asset management and Computer Diagnostics.
 
-![GantryDisplayDiagnostics](../Media/image8.emf){#fig:}
+![GantryDisplayDiagnostics](../Media/GantryDisplayDiagnostics.png){#fig:}
 
 ### GantryDisplayPlanning
 
 The class diagram to show the relationship between classes and interfaces involved in IQSpect and Planar planning operation.
 
-![GantryDisplayPlanning](../Media/image9.emf){#fig:}
+![GantryDisplayPlanning](../Media/GantryDisplayPlanning.png){#fig:}
 
 ### GantryOperations
 
 The class diagram to describe relationship between classes for change collimator operation in gantry display. User can install required collimators depending on scan to be performed. For example, LEHR collimator while performing planar scans and Smart zoom collimator for IQSpect planning. Collimator has its own set of detector configurations, that need to configured before the scan.
 
-![CollimatorChangeOperation](../Media/image10.emf){#fig:}
+![CollimatorChangeOperation](../Media/CollimatorChangeOperation.png){#fig:}
 
 The class diagram to show various gantry operations that user can perform in gantry display. Those operations include collimator change, touch pad test, unload, retract, homing, configure gantry etc. Mainly gantry display back end has IOperationsMonitor and IOperation interfaces to handle various gantry operations.
 
-![GantryOperations](../Media/image11.emf){#fig:}
+![GantryOperations](../Media/GantryOperations.png){#fig:}
 
 ### IQSPECT
 
 The class diagram to show the relationship between classes and interfaces involved in IQSpect operations. Prerequisites to enable IQSpect planning are cardiac IqSpect protocol to be loaded, smart zoom collimator need to be installed and detectors should be in IqSpect configuration. On moving IqSpect planning box to focus on interested area, user can start IQSpect planning. User can do IqSpect move and cancel operations to move detectors to focused area and to cancel or re-center the IQSpect planning respectively.
 
-![IQSpect Operations](../Media/image12.emf){#fig:}
+![IQSpect Operations](../Media/IQSpectOperations.png){#fig:}
 
 ### Planar Offset
 
 The class diagram to show relationship between classes and interfaces for planar offset. For any planar scan protocol, when user changes zoom \> 1.0 in PLV, offset button appears in gantry display. On click of offset button, planar offset button controls like apply, center and cancel are shown in gantry display UI. The planar offset focus box for planning is also shown. User can move the box to desired offset and can apply offset. On center button click, focus box is re-centered. On click of cancel, offset planning is canceled and previously saved offset is retained.
 
-![PlanarOffset](../Media/image13.emf){#fig:}
+![PlanarOffset](../Media/PlanarOffset.png){#fig:}
 
 ### PowerSave
 
 The class diagram to show power save mode in gantry display. When user has not done any interaction or when system is inactive for 10 minutes, then system interface invokes power save mode. The same is notified to gantry display. As soon as gantry display is notified with power save, system enters into power save mode. User can wake up the system, either by touching gantry display device or by doing any interaction in ICS.
 
-![PowerSave](../Media/image14.emf){#fig:}
+![PowerSave](../Media/PowerSave.png){#fig:}
 
 ### Recovery
 
 The class diagram to show the relationship between the classes for recovery in gantry display. During collimator change cancel, recovery is invoked. Recovery operation brings the system back to nearest stabilized state.
 
-![Recovery](../Media/image15.emf){#fig:}
+![Recovery](../Media/Recovery.png){#fig:}
 
 #### MI.GantryDisplay.DataProvider::LocalValueParameter\<T\>
 
@@ -78,63 +78,63 @@ The class diagram to show the relationship between the classes for recovery in g
 
 Following diagram shows how user can open remote gantry display from console menu. It opens gantry display in read only mode if IsVncInReadOnly property is true in vnc configuration.
 
-![Expert-I](../Media/image16.emf){#fig:}
+![Expert-I](../Media/Expert-I.png){#fig:}
 
-![RemoteLauncher](../Media/image17.emf){#fig:}
+![RemoteLauncher](../Media/RemoteLauncher.png){#fig:}
 
 ### SystemReconfiguration
 
 The class diagram to show the relationship between classes and interfaces for system reconfiguration in gantry display. Each collimator has its own set of system configuration. It is displayed in system reconfiguration flyout of gantry display UI. User can change to required detector configurations for the collimator installed, to configure detectors before starting the scan.
 
-![SystemReconfiguration](../Media/image18.emf){#fig:}
+![SystemReconfiguration](../Media/SystemReconfiguration.png){#fig:}
 
 ### UnloadPatient
 
 The class diagram to show the relationship between classes and interfaces involved in Unload Dialog Sync between Gantry Display and Exam application.
 
-![Unload Dialog Sync](../Media/image19.emf){#fig:}
+![Unload Dialog Sync](../Media/UnloadDialogSync.png){#fig:}
 
 ### WebConfig for IIS
 
 ## Deployment View
 
-![Deployment Diagram](../Media/image20.emf){#fig:}
+![Deployment Diagram](../Media/DeploymentDiagram.png){#fig:}
 
-![GantryDisplay](../Media/image21.emf){#fig:}
+![GantryDisplay](../Media/GantryDisplay.png){#fig:}
 
 ## Dynamic View
 
 Following diagram shows how Home Screen is shown when Gantry Display WPF application comes up. It will set the HomeScreen to "Connecting To UI" when Scanner is not connected and it will browse to angular app when Scanner is connected.
 
-![HomeScreen](../Media/image22.emf){#fig:}
+![HomeScreen](../Media/HomeScreen.png){#fig:}
 
 Following sequence diagram shows how Initial screen is displayed when GantryDisplay.FE application comes up.
 
-![LoadInitialScreen](../Media/image23.emf){#fig:}
+![LoadInitialScreen](../Media/LoadInitialScreen.png){#fig:}
 
 Following sequence diagram shows how the Patient Information is fetched and displayed. The visibility of the patient info is fetched from Config.Net.
 
-![PatientInfoState](../Media/image24.emf){#fig:}
+![PatientInfoState](../Media/PatientInfoState.png){#fig:}
 
 Following sequence diagram shows how Angular client fetches PositionAxes view model from Backend Hub.
 
-![PositionAxesDataAcess](../Media/image25.emf){#fig:}
+![PositionAxesDataAcess](../Media/PositionAxesDataAcess.png){#fig:}
 
 Following sequence diagram shows when Gantry Display comes up then call comes to backend to send latest PScope ViewModel and Navigator ViewModel to Angular clients.
 
-![PScopeDataAcess](../Media/image26.emf){#fig:}
+![PScopeDataAcess](../Media/PScopeDataAcess.png){#fig:}
 
 Following sequence shows how we can navigate to a screen when user did some interaction on gantry display
 
-![ScreenNavigation](../Media/image27.emf){#fig:}
+![ScreenNavigation](../Media/ScreenNavigation.png){#fig:}
 
 Following sequence diagram shows how we can toggle visibility of header of Pscope page on various user interactions.
 
-![ShowHidePscopeHeader](../Media/image28.emf){#fig:}
+![ShowHidePscopeHeader](../Media/ShowHidePscopeSequence.png){#fig:}
 
 Following diagram shows the sequence of steps which will be performed when stutdown call comes from system interface and how gantry display backend handles that call and sends command to frontend to show pop-up and shutdown gantry display.
 
-![ShutDown](../Media/image29.emf){#fig:}
+![ShutDown](../Media/ShutDown.png){#fig:}
 
 ### Calibration
 
