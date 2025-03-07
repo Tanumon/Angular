@@ -72,7 +72,7 @@ The class diagram to show the relationship between the classes for recovery in g
 
 ![Recovery](../media/Recovery.png){#fig:}
 
-#### MI.GantryDisplay.DataProvider::LocalValueParameter\<T\>
+#### MI.GantryDisplay.DataProvider::LocalValueParameter
 
 ### RemoteLauncher
 
@@ -140,67 +140,67 @@ Following diagram shows the sequence of steps which will be performed when stutd
 
 Following sequence diagram shows a sequence to update execution control buttons from CalibrationApp to GantryDisplay and vice versa.
 
-![CalibrationExecutionControlOperation](../media/image30.emf){#fig:}
+![CalibrationExecutionControlOperation](../media/CalibrationExecutionControlOperationSequence.png){#fig:}
 
 Following sequence diagram shows object exchange between Gantry Display and Calibration using WCF/H communication.
 
-![CalibrationGPTCommunication](../media/image31.emf){#fig:}
+![CalibrationGPTCommunication](../media/CalibrationGPTCommunication.png){#fig:}
 
 Following sequence diagram shows the GantryDisplay sequence structure for Calibration Motion Info Provider. This Diagram basically shows Opening or closing automatic motion in progress and enable/Disable navigator buttons in gantry display from calibration
 
-![MotionInfoProvider](../media/image32.emf){#fig:}
+![MotionInfoProvider](../media/MotionInfoProviderSequence.png){#fig:}
 
 #### WCF
 
 ### GantryDisplay(Exam Workflow)
 
-![Exam Workflow](../media/image33.emf){#fig:}
+![Exam Workflow](../media/ExamWorkflow.png){#fig:}
 
 ### GantryDisplayDiagnostics
 
 The Sequence diagram to show data flow for Asset Data of GPT Computer Diagram.
 
-![GPTAssetData](../media/image34.emf){#fig:}
+![GPTAssetData](../media/GPTAssetData.png){#fig:}
 
 The Sequence diagram to show data flow for StateData of GPT Computer Diagram.
 
-![GPTStateData](../media/image35.emf){#fig:}
+![GPTStateData](../media/GPTStateData.png){#fig:}
 
 ### GantryOperations
 
 The sequence diagram to show various gantry operations that user can perform in gantry display. Those operations include collimator change, touch pad test, unload, retract, homing, configure gantry etc.
 
-![GantryOperations](../media/image36.emf){#fig:}
+![GantryOperations](../media/GantryOperationsSequence.png){#fig:}
 
 ### IQSPECT
 
 The sequence diagram to show the sequential flow of enabling IqSpect execution controls in the gantry display UI. When IQSpect planning is enabled and planning box appears in the UI, user does IQSpect planning by moving the box. Initially IQSpect execution controls like Move and Cancel are disabled. Once user starts moving planning box, Move button is enabled in the gantry display UI.
 
-![Enable IQSpect Execution Controls](../media/image37.emf){#fig:}
+![Enable IQSpect Execution Controls](../media/EnableIQSpectExecutionControls.png){#fig:}
 
 The diagram describes the operational flow of canceling IQSpect move operation, in sequence. IQSpect move operation is cancelable operation. Once user performs move operation, meanwhile user can cancel ongoing detectors move operation. On click of cancel, from gantry display UI, gantry display back end sends cancel command to SNAC to cancel ongoing operation. SNAC either sends gantry setup completed event with canceled status, indicating success or it sends event with error, indicating failure.
 
-![IQSpect Cancel Operation](../media/image38.emf){#fig:}
+![IQSpect Cancel Operation](../media/IQSpectCancelOperation.png){#fig:}
 
 The sequence diagram to show the flow of performing IQSpect move operation. Once user is fine with focused area during IQSpect planning, user clicks IQSpect Move button. IQSpect box position points are sent to SNAC. Detectors are moved focusing planned area. If auto move of detectors is success, SNAC sends success status and updates IQSpect positions. Otherwise it sends gantry setup completed with error.
 
-![IQSpect Move Operation](../media/image39.emf){#fig:}
+![IQSpect Move Operation](../media/IQSpectMoveOperation.png){#fig:}
 
-![IQSpectInteractions](../media/image40.emf){#fig:}
+![IQSpectInteractions](../media/IQSpectInteractions.png){#fig:}
 
 ### Planar Offset
 
 Sequence diagram to describe the flow of applying planar offset. Offset planning is enabled for acquisition zoom value \> 1. User moves the focus box to the desired portion. Once user is fine with the focused area, he can apply offset. Gantry display back end sends offset positions to system interface to apply the desired offset.
 
-![Apply And Sync Offset](../media/image41.emf){#fig:}
+![Apply And Sync Offset](../media/ApplyAndSyncOffset.png){#fig:}
 
 Sequence diagram to describe the flow of applying planar offset. Offset planning is enabled for acquisition zoom value \> 1. User moves the focus box to the desired portion. Once user is fine with the focused area, he can apply offset. Gantry display back end sends offset positions to system interface to apply the desired offset.
 
-![Apply Planar Offset](../media/image42.emf){#fig:}
+![Apply Planar Offset](../media/ApplyPlanarOffset.png){#fig:}
 
 Sequence diagram to show the flow of Cancel planar offset. During current planar offset planning, if user doesn't intend to save the offset, he can cancel offset. On cancel offset, previously applied offset is retained. Pscope image is applied with the current acquisition zoom and previously applied offset.
 
-![Cancel Planar Offset](../media/image43.emf){#fig:}
+![Cancel Planar Offset](../media/CancelPlanarOffset.png){#fig:}
 
 #### InteractionFragment
 
@@ -208,29 +208,29 @@ Sequence diagram to show the flow of Cancel planar offset. During current planar
 
 Following diagram shows how the PowerSave/Power WakeUp call comes from System Layer to GantryDisplay BE and sends the same to UI which in turn informs the system to move to corresponding power state.
 
-![ScannerPowerState](../media/image44.emf){#fig:}
+![ScannerPowerState](../media/ScannerPowerState.png){#fig:}
 
 ### Recovery
 
 Following diagram shows the sequence of operations performed when recovery operation is started.
 
-![Recovery](../media/image45.emf){#fig:}
+![Recovery](../media/RecoverySequence.png){#fig:}
 
 ### RemoteLauncher
 
 Following diagram shows how user can open remote gantry display from console menu. It opens gantry display in read only mode if IsVncInReadOnly property is true in vnc configuration.
 
-![Expert-I](../media/image46.emf){#fig:}
+![Expert-I](../media/Expert-ISequence.png){#fig:}
 
 Following diagram shows how user can open remote gantry display from console menu. It opens gantry display in read only mode if IsVncInReadOnly property is true in vnc configuration.
 
-![RemoteLauncher](../media/image47.emf){#fig:}
+![RemoteLauncher](../media/RemoteLauncherSequence.png){#fig:}
 
 ### SystemReconfiguration
 
 Following diagram shows the sequence of steps performed when Collimator change or change Detector configuration operation is initiated by user. It also shows various events like OnGantrySetupCompleted, GantrySetupStarted etc. which will be handled during this operation.
 
-![SystemReconfiguration](../media/image48.emf){#fig:}
+![SystemReconfiguration](../media/SystemReconfigurationSequence.png){#fig:}
 
 #### WebServer
 
@@ -238,7 +238,7 @@ Following diagram shows the sequence of steps performed when Collimator change o
 
 The diagram describes the operational flow of how Unload Dialog Sync happens between Gantry Display and Exam application when user clicks on Unload button on Gantry Display UI, in sequence.
 
-![Unload Dialog Sync](../media/image49.emf){#fig:}
+![Unload Dialog Sync](../media/UnloadDialogSyncSequence.png){#fig:}
 
 ## Algorithms
 
